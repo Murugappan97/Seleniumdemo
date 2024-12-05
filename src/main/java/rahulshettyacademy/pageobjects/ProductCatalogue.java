@@ -46,7 +46,7 @@ public class ProductCatalogue extends AbstractComponent {
 		return prod;
 	}
 
-	public WebElement getProductByName2(String productName)
+	public WebElement getProductByName2(String productName2)
 	{
 		WebElement prod =	getProductList().stream().filter(product->
 				product.findElement(By.cssSelector("b")).getText().equals(productName2)).findFirst().orElse(null);

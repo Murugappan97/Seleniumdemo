@@ -20,7 +20,6 @@ public class Seleniuminterview {
         driver.findElement(By.cssSelector(".submit.signInBtn")).click();
         String loginmsg = driver.findElement(By.tagName("p")).getText();
         assert.assertEquals(loginmsg,"You are successfully logged in.");
-
     }
 
 
