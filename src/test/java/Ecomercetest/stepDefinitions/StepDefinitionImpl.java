@@ -40,7 +40,14 @@ public class StepDefinitionImpl extends BaseTest{
 		List<WebElement> products = productCatalogue.getProductList();
 		productCatalogue.addProductToCart(productName);
 	}
-	
+
+	@When("^I add product2 (.+) to Cart$")
+	public void i_add_product2_to_cart(String productName2) throws InterruptedException
+	{
+		List<WebElement> products = productCatalogue.getProductList();
+		productCatalogue.addProductToCart2(productName2);
+	}
+
 	@When("^Checkout (.+) and submit the order$")
 	public void checkout_submit_order(String productName)
 	{

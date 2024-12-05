@@ -14,7 +14,15 @@ Feature: Purchase the order from Ecommerce Website
     And Checkout <productName> and submit the order
     Then "THANKYOU FOR THE ORDER." message is displayed on ConfirmationPage
 
+    @Regression
+    Given Logged in with username <name> and password <password>
+    When I add product <productName> to Cart
+    And Checkout <productName> and submit the order
+    Then "THANKYOU FOR THE ORDER." message is displayed on ConfirmationPage
+
+
+
     Examples: 
-      | name  								|  password		    |	productName |
-      | rahulshetty@gmail.com |  Iamking@000    | ZARA COAT 3 | 
+      | name  								|  password		    |	productName | |productName2|
+      | rahulshetty@gmail.com |  Iamking@000    | ZARA COAT 3 |   |ADIDAS ORIGINAL|
 
